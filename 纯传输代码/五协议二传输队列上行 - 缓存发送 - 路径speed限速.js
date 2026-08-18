@@ -64,19 +64,18 @@ const urlParamCacheLimit = 20;//URL参数解析结果缓存条数
 const proxyStrategyOrder = ['socks', 'http', 'https', 'sstp', 'turn', 'turns', 'nat64'];
 const dohEndpoints = ['https://cloudflare-dns.com/dns-query', 'https://dns.google/dns-query'];
 const dohNatEndpoints = ['https://cloudflare-dns.com/dns-query', 'https://dns.google/resolve'];
-const proxyIpAddrs = {EU: 'eu.proxy.58807.de5.net', AS: 'sg.proxy.58807.de5.net', JP: 'jp.proxy.58807.de5.net', HK: 'hk.proxy.58807.de5.net', TW: 'tw.proxy.58807.de5.net', US: 'us.proxy.58807.de5.net'};//分区域proxyip
-const finallyProxyHost = 'proxy.58807.de5.net';//兜底proxyip
+const proxyIpAddrs = {EU: 'eu.proxy.zjcloud.us.ci', AS: 'sg.proxy.zjcloud.us.ci', JP: 'jp.proxy.zjcloud.us.ci', HK: 'hk.proxy.zjcloud.us.ci', TW: 'tw.proxy.zjcloud.us.ci', US: 'us.proxy.zjcloud.us.ci'};//分区域proxyip
+const finallyProxyHost = 'proxy.zjcloud.us.ci';//兜底proxyip
 const coloRegions = {
-    JP: new Set(['FUK', 'ICN', 'KIX', 'NRT', 'OKA']),
-    HK: new Set(['HKG', 'MFM']),
-    TW: new Set(['KHH', 'TPE']),
+    NRT: new Set(['FUK', 'ICN', 'KIX', 'NRT', 'OKA']), HKG: new Set(['HKG', 'MFM']), TPE: new Set(['KHH', 'TPE']),
+    LAX: new Set(['LAX']), SEA: new Set(['SEA']), SJC: new Set(['SJC']),
     EU: new Set([
         'ACC', 'ADB', 'ALA', 'ALG', 'AMM', 'AMS', 'ARN', 'ATH', 'BAH', 'BCN', 'BEG', 'BGW', 'BOD', 'BRU', 'BTS', 'BUD', 'CAI',
         'CDG', 'CPH', 'CPT', 'DAR', 'DKR', 'DMM', 'DOH', 'DUB', 'DUR', 'DUS', 'DXB', 'EBB', 'EDI', 'EVN', 'FCO', 'FRA', 'GOT',
         'GVA', 'HAM', 'HEL', 'HRE', 'IST', 'JED', 'JIB', 'JNB', 'KBP', 'KEF', 'KWI', 'LAD', 'LED', 'LHR', 'LIS', 'LOS', 'LUX',
         'LYS', 'MAD', 'MAN', 'MCT', 'MPM', 'MRS', 'MUC', 'MXP', 'NBO', 'OSL', 'OTP', 'PMO', 'PRG', 'RIX', 'RUH', 'RUN', 'SKG',
         'SOF', 'STR', 'TBS', 'TLL', 'TLV', 'TUN', 'VIE', 'VNO', 'WAW', 'ZAG', 'ZRH']),
-    AS: new Set([
+    SIN: new Set([
         'ADL', 'AKL', 'AMD', 'BKK', 'BLR', 'BNE', 'BOM', 'CBR', 'CCU', 'CEB', 'CGK', 'CMB', 'COK', 'DAC', 'DEL', 'HAN',
         'HYD', 'ISB', 'JHB', 'JOG', 'KCH', 'KHI', 'KTM', 'KUL', 'LHE', 'MAA', 'MEL', 'MLE', 'MNL', 'NAG', 'NOU',
         'PAT', 'PBH', 'PER', 'PNH', 'SGN', 'SIN', 'SYD', 'ULN', 'VTE'])
